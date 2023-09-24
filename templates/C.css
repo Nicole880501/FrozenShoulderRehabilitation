@@ -1,0 +1,596 @@
+@CHARSET "UTF-8";
+
+/* RWD */
+/* @media (max-width: 1020px) {
+	
+} */
+nav{
+	background: RGB(250,234,211);
+	color:RGB(101,101,101);
+	font-size:25pt;
+	/* display: flex; */
+	align-items: center;
+	/* position: fixed;  */ /*滾動時仍置頂*/
+	border:0px;
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	padding:30px;
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+	border-radius:5px;
+
+}
+
+ol,ul {
+	/* padding-left: 2rem; */
+	float: right;
+	list-style: none;
+	background-color: RGB(250,234,211);
+	margin-top: 0%;
+	padding-left: 10px;
+}
+
+.collapse:not(.show) {
+	display: none;
+}
+
+collapsing.collapse-horizontal {
+	width: 0;
+	height: auto;
+	transition: width 0.35s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.collapsing.collapse-horizontal {
+		transition: none;
+	}
+}
+
+.navbar-collapse {
+	flex-basis: 1%;
+	flex-grow: 1;
+	align-items: center;
+}
+.accordion-button:not(.collapsed) {
+	color: #007891;
+	background-color: #e6f3f6;
+	box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.125);
+}
+.accordion-button:not(.collapsed)::after {
+	background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23007891'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+	transform: rotate(-180deg);
+}
+
+#mainNav {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1030;
+	/* border-bottom: 1px solid #dee2e6; */
+	/* background-color: #fff; */
+	font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+#mainNav .navbar-brand {
+	font-weight: 800;
+}
+#mainNav .navbar-toggler {
+	font-size: 0.75rem;
+	font-weight: 800;
+	padding: 0.75rem;
+	text-transform: uppercase;
+	float:right;
+	background-color:RGB(250,234,211);border:0;
+}
+#mainNav .navbar-nav > li.nav-item > a.nav-link {
+	font-size: 0.75rem;
+	font-weight: 800;
+	letter-spacing: 0.0625em;
+	text-transform: uppercase;
+}
+
+/* .nav-link{
+	position:relative; 	
+	float:right; 
+	text-align:center; 
+	font-size:16pt; 
+	background:transparent; 
+	border:none; 
+	border-radius:5px;
+	margin-top: -28px;
+	margin-left: 15px;
+
+	outline:none; 
+	color:RGB(101,101,101);
+	text-decoration:none; 
+
+	cursor:pointer;
+	
+
+} */
+
+.nav-link {
+	display: block;
+	padding: 0.5rem 1rem;
+	color: #212529;
+	transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
+	text-decoration:none;
+	font-size: 20px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.nav-link {
+		transition: none;
+	}
+}
+.navbar-toggler {
+	float: right;
+	padding: 0.25rem 0.75rem;
+	font-size: 1.25rem;
+	line-height: 1;
+	/* background-color: transparent;
+	border: 1px solid transparent; */
+	transition: box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.navbar-toggler {
+		transition: none;
+	}
+}
+
+.navbar > .container,
+.navbar > .container-fluid,
+.navbar > .container-sm,
+.navbar > .container-md,
+.navbar > .container-lg,
+.navbar > .container-xl,
+.navbar > .container-xxl {
+	font-size: 20pt;
+	/* display: flex; */
+	flex-wrap: inherit;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.but{
+	font-size: 20px;
+	color:RGB(101,101,101);
+	background:#cdcdcd;
+	cursor:pointer;
+	border-radius:5px;
+	border:transparent;
+	margin:12px;
+	display: flex;
+	/* justify-content:center;
+	align-items: center; */
+	position:relative;
+	/* width: 50px;  */
+	/* text-align:center;  */
+
+}
+
+button:not(:disabled), [type=button]:not(:disabled), [type=reset]:not(:disabled), [type=submit]:not(:disabled) {
+	cursor: pointer;
+}
+
+.pose_td{
+	height: 30px;
+	border: 0;
+}
+
+/* 最下方的義大利體 */
+.text-muted {
+	--bs-text-opacity: 1;
+	color: #6c757d !important;
+}
+
+.text-center {
+	text-align: center !important;
+}
+.fst-italic {
+	font-style: italic !important;
+}
+
+body{
+	/* margin:20px; */
+	margin:0;
+	padding:0;
+	height:100%;
+	font-family:sans-serif;
+	/* background:url(http://168.138.55.115/32401.jpg); */
+	background-color:#FAFAFA;
+	/* background-blend-mode: multiply; */
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size: 50%, 80%;
+}
+
+.header{
+	height: 20px;
+	position: absolute;
+	top: 0;
+	z-index: 900;
+	margin-bottom: 20px; /*隨footer高度需做調整*/
+	/* margin: 0px;
+	padding: 50px 10px 50px 20px;
+	border-radius: 5px; */
+}
+
+.center{
+	text-align:center;
+	min-height: 100%;
+	height:490px;
+	padding-top: 10px;
+	padding-bottom:10px; /*隨footer高度需做調整*/
+}
+
+.footer{
+	background-color: #FAFAFA;
+	position: relative;
+	position: fixed;
+	height: 10px; /*footer本身高度*/
+	margin-top: 10px; /*隨footer高度需做調整*/
+	border-radius: 5px;
+	clear: both;
+	/* padding-top:10px; */
+	/* margin-top:5px; */
+	/* margin-bottom:-10px; */
+}
+.button{
+	width: 280px;
+	/* display: flex; */
+	justify-content:center;
+	/* float:right; */
+	align-items: center;
+	/* flex-wrap: wrap;  */
+
+	font-size:18pt;
+	font-weight:bolder;
+	background:transparent;
+	border:none;
+	outline:none;
+	color:rgb(0, 0, 0);
+	background:#D6EAD4;
+	cursor:pointer;
+	border-radius:5px;
+	margin:18px 10px 18px 10px;
+	padding:20px ;
+}
+
+/* .button{
+	position:relative;
+	top:-20px;
+	float:right;
+	width: 150px;
+	text-align:center;
+	font-size:14pt;
+	background:transparent;
+	border:none;
+	outline:none;
+	color:#fff;background:#66B3FF; cursor:pointer;border-radius:5px; margin:10px;
+	padding:20px ;
+} */
+
+.back{
+	position:relative;
+	width: 100px;
+	text-align:center;
+	font-size:15pt;
+	background:transparent;
+	border:none;
+	outline:none;
+	color:RGB(101,101,101);
+	background:#cdcdcd;
+	cursor:pointer;
+	border-radius:5px;
+	margin:12px;
+	padding:5px;
+	text-decoration:none;
+
+}
+
+table{
+	margin-top:10px;
+	width:90%;
+	/* height:430px;  */
+	background-color:#FAFAFA;
+	border-collapse:collapse;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+th{
+	margin:0px;
+	height:10px;
+	padding: 0px;
+	border-collapse:collapse;
+}
+
+td{
+	text-align:center;
+	/* width:50%; */
+	margin:0px;
+	height:50px;
+	padding: 0px;
+	background-color: #FAFAFA;
+	border-collapse:collapse;
+}
+
+tr{
+	height:40px;
+
+}
+
+.info{
+	margin:20px;
+	text-align:left;
+	font-size: 15px;
+}
+
+video {
+	width: 400px;
+	height: 500px;
+	object-fit: cover;
+}
+
+.box{
+	position:absolute;
+	/* transform:tranlate(-50%,-50%); */
+	top:10%;
+	left:5%;
+	right:40%;
+	bottom:10%;
+	width:30%;
+	padding:40px;
+	background:rgba(0,0,0,0.5);
+	box-sizing:border-box;
+	box-shadow:0 3px 5px rgba(0,0,0,.5);
+	border-radius:10px;
+}
+
+.box h1{
+	color:#fff;
+	text-align:center;
+}
+.box h2{
+	margin:0 0 20px;
+	padding:0;
+	color:#fff;
+	text-align:center;
+}
+.box .inputBox{
+	position:relative;
+}
+.box .inputBox input{
+	width:100%;
+	padding:10px 0;
+	font-size:15px;
+	color:#fff;
+	letter-spacing:3px;
+	margin-bottom:30px;
+	border:none;
+	border-bottom: 1px solid #fff;
+	outline:none;
+	background:transparent;
+}
+.box .inputBox label{
+	position:absolute;
+	top:0;
+	left:0;
+	letter-spacing:1px;
+	padding:10px 0;
+	font-size:16px;
+	color:#fff;
+	pointer-events:none;
+	transition:.5s;
+}
+.box .inputBox input:focus~label,
+.box .inputBox input:valid~label{
+	top:-18px;
+	left:0;
+	color:#66B3FF;
+	font-size:12px;
+}
+.box input[type="submit"]{
+	background:transparent;
+	border:none;
+	outline:none;
+	color:#fff;
+	background:#66B3FF;
+	padding:3% 15%;
+	cursor:pointer;
+	border-radius:5px;
+	margin:10px;
+}
+.box input[type="button"]{/*按鈕*/
+	background:transparent;/*背景：全透明*/
+	border:none;           /*邊框樣式*/
+	outline:none;
+	color:#fff;
+	background:#66B3FF;
+	padding:3% 15%;     /*按鈕大小*/
+	cursor:pointer;        /*光標樣式*/
+	border-radius:5px;     /*邊框圓角*/
+	margin:10px;
+}
+.box img{
+	align:center;
+	margin:10px;
+}
+.box table{
+	border:2px #000000;
+	align:center;
+}
+.box th{
+	border: 2px solid #000000;
+	padding: 5px;
+	color:#fff;
+}
+.box td{
+	border: 2px solid #000000;
+	padding: 5px;
+	color: #fff;
+}
+
+/*longbox*/
+.longbox{
+	position:absolute;
+	transform:translate(-50%,-50%);
+	top:20%;
+	left:25%;
+	width:50%;
+	padding:40px;
+	background:rgba(0,0,0,.8);
+	box-sizing:border-box;
+	box-shadow:0 15px 25px rgba(0,0,0,.5);
+	border-radius:10px;
+}
+.longbox h1{
+	color:#fff;
+	text-align:center;
+}
+.longbox h2{
+	margin:0 0 30px;
+	padding:0;
+	color:#fff;
+	text-align:center;
+}
+.longbox .inputBox{
+	position:relative;
+}
+.longbox .inputBox input{
+	width:100%;
+	padding:10px 0;
+	font-size:15px;
+	color:#fff;
+	letter-spacing:3px;
+	margin-bottom:30px;
+	border:none;
+	border-bottom: 1px solid #fff;
+	outline:none;
+	background:transparent;
+}
+.longbox .inputBox label{
+	position:absolute;
+	top:0;
+	left:0;
+	letter-spacing:1px;
+	padding:10px 0;
+	font-size:16px;
+	color:#fff;
+	pointer-events:none;
+	transition:.5s;
+}
+.longbox .inputBox input:focus~label,
+.longbox .inputBox input:valid~label{
+	top:-18px;
+	left:0;
+	color:#66B3FF;
+	font-size:12px;
+}
+.longbox input[type="submit"]{
+	background:transparent;
+	border:none;
+	outline:none;
+	color:#fff;
+	background:#66B3FF;
+	padding:3% 15%;
+	cursor:pointer;
+	border-radius:5px;
+	margin:10px;
+}
+.longbox input[type="button"]{
+	background:transparent;/*背景：全透明*/
+	border:none;           /*邊框樣式*/
+	outline:none;
+	color:#fff;
+	background:#66B3FF;
+	padding:3% 15%;     /*按鈕大小*/
+	cursor:pointer;        /*光標樣式*/
+	border-radius:5px;     /*邊框圓角*/
+	margin:10px;
+}
+.longbox img{
+	align:center;
+	margin:10px;
+}
+.longbox table{
+	border:2px #000000;
+	align:center;
+}
+.longbox th{
+	border: 2px solid #000000;
+	padding: 5px;
+	color:#fff;
+}
+.longbox td{
+	border: 2px solid #000000;
+	padding: 5px;
+	color: #fff;
+}
+.container{
+	font-size:10px;
+}
+
+/*手機*/
+@media only screen and (max-width: 768px){
+	.box{
+		top:5%;
+		left:5%;
+		width:90%;
+	}
+	.box .inputBox label{
+		letter-spacing:1px;
+	}
+	.box .inputBox input:focus~label,
+	.box .inputBox input:valid~label{
+		font-size:16px;
+	}
+	.box input[type="submit"]{
+		padding:10% 30%;
+		font-size:20px;
+	}
+	.box input[type="button"]{
+		padding:10% 30%;
+		font-size:20px;
+	}
+	.box th{
+		font-size:10px;
+		padding: 2px;
+	}
+	.box td{
+		font-size:10px;
+		padding: 2px;
+	}
+
+	.longbox{
+		top:5%;
+		left:0;
+		width:450px;
+	}
+	.longbox .inputBox label{
+		letter-spacing:1px;
+	}
+	.longbox .inputBox input:focus~label,
+	.longbox .inputBox input:valid~label{
+		font-size:16px;
+	}
+	.longbox input[type="submit"]{
+		padding:10% 30%;
+		font-size:20px;
+	}
+	.longbox input[type="button"]{
+		padding:10% 30%;
+		font-size:20px;
+	}
+	.longbox th{
+		font-size:10px;
+		padding: 2px;
+	}
+	.longbox td{
+		font-size:10px;
+		padding: 2px;
+	}
+}
